@@ -1,5 +1,6 @@
 package com.github.ledlogic.ogp;
 
+import org.apache.commons.lang.StringUtils;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;;
 
@@ -28,6 +29,19 @@ public class OpenGraphElements extends Elements {
 	
 	public String getHtml() {
 		return this.outerHtml();
+	}
+	
+	public void addMeta(OpenGraphProperty property, String content) {
+		if (property != null && StringUtils.isNotBlank(content)) {
+			addMeta(property.getProperty(), content);
+		}
+	}
+	
+	public void addMeta(String property, String content) {
+		if (StringUtils.isNotBlank(property) && StringUtils.isNotBlank(content)) {
+			OpenGraphMeta meta = new OpenGraphMeta(property, content);
+			this.add(meta);
+		}
 	}
 	
 }

@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DYLAN-PC" name="com.github.ledlogic.ogp.OpenGraphMetaTest" tests="1" time="0.179" timestamp="2013-09-04T12:37:22">
+<testsuite errors="0" failures="0" hostname="MSPWWD64QJLS1" name="com.github.ledlogic.ogp.OpenGraphMetaTest" tests="1" time="0.068" timestamp="2013-09-04T16:40:31">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="eclipse.pdebuild.templates" value="/C:/dev/eclipse/eclipse-kepler-4.3.0/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
     <property name="dist" value="./dist" />
     <property name="lib" value="./lib" />
-    <property name="os.name" value="Windows 8" />
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_43\jre\classes" />
-    <property name="ant.file.ogp-java" value="C:\dev\adk_workspace\ogp-java\build.xml" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="C:\dev\java\jdk1.6.0_16_x64\jre\lib\resources.jar;C:\dev\java\jdk1.6.0_16_x64\jre\lib\rt.jar;C:\dev\java\jdk1.6.0_16_x64\jre\lib\sunrsasign.jar;C:\dev\java\jdk1.6.0_16_x64\jre\lib\jsse.jar;C:\dev\java\jdk1.6.0_16_x64\jre\lib\jce.jar;C:\dev\java\jdk1.6.0_16_x64\jre\lib\charsets.jar;C:\dev\java\jdk1.6.0_16_x64\jre\classes" />
+    <property name="ant.file.ogp-java" value="C:\dev\eclipse_workspace\jcom201308\ogp-java\build.xml" />
     <property name="sun.desktop" value="windows" />
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
-    <property name="ant.home" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609" />
-    <property name="java.runtime.version" value="1.6.0_43-b01" />
+    <property name="ant.home" value="C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030" />
+    <property name="java.runtime.version" value="1.6.0_16-b01" />
     <property name="images" value="./images" />
-    <property name="user.name" value="Dylan" />
+    <property name="user.name" value="conraj1" />
     <property name="reports" value="./docs/reports" />
     <property name="test.results" value="./report" />
     <property name="user.language" value="en" />
     <property name="build" value="./build" />
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\bin" />
+    <property name="sun.boot.library.path" value="C:\dev\java\jdk1.6.0_16_x64\jre\bin" />
     <property name="ant.project.default-target" value="all" />
     <property name="ant.project.name" value="ogp-java" />
-    <property name="java.version" value="1.6.0_43" />
+    <property name="java.version" value="1.6.0_16" />
     <property name="user.timezone" value="" />
     <property name="bin" value=".//bin" />
     <property name="sun.arch.data.model" value="64" />
     <property name="compile.optimize" value="on" />
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\endorsed" />
+    <property name="java.endorsed.dirs" value="C:\dev\java\jdk1.6.0_16_x64\jre\lib\endorsed" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -39,28 +40,29 @@
     <property name="java.class.version" value="50.0" />
     <property name="src" value="./src" />
     <property name="user.country" value="US" />
-    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_43\jre" />
+    <property name="java.home" value="C:\dev\java\jdk1.6.0_16_x64\jre" />
     <property name="test.xsl" value="test/xsl" />
     <property name="java.vm.info" value="mixed mode" />
-    <property name="ant.file" value="C:\dev\adk_workspace\ogp-java\build.xml" />
-    <property name="os.version" value="6.2" />
+    <property name="ant.file" value="C:\dev\eclipse_workspace\jcom201308\ogp-java\build.xml" />
+    <property name="os.version" value="6.1" />
     <property name="path.separator" value=";" />
-    <property name="java.vm.version" value="20.14-b01" />
+    <property name="java.vm.version" value="14.2-b01" />
     <property name="docs" value="./docs" />
     <property name="user.variant" value="" />
-    <property name="ant.library.dir" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib" />
+    <property name="ant.library.dir" value="C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib" />
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
-    <property name="user.home" value="C:\Users\Dylan" />
+    <property name="env_spec" value="local" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/dev/eclipse/eclipse-kepler-4.3.0/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/scripts/" />
+    <property name="user.home" value="C:\Users\conraj1" />
     <property name="java.specification.vendor" value="Sun Microsystems Inc." />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;." />
+    <property name="java.library.path" value="C:\dev\java\jdk1.6.0_16_x64\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Perl64\site\bin;C:\Perl64\bin;C:\Program Files\SlikSvn\bin;C:\oracle\product\11.2.0\client_1\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\QuickTime\QTSystem\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Citrix\ICAService\;C:\Program Files (x86)\Citrix\System32\;C:\dev\jenkins\;C:\dev\nodejs\;C:\Users\conraj1\AppData\Roaming\npm;C:\dev\groovy-2.1.3\bin;C:\dev\ant\apache-ant-1.9.1\bin" />
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.github.ledlogic.ogp.OpenGraphMetaTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\dev\adk_workspace\ogp-java\docs\reports\xml\TEST-com.github.ledlogic.ogp.OpenGraphMetaTest.xml crashfile=C:\dev\adk_workspace\ogp-java\junitvmwatcher2575532223960901499.properties propsfile=C:\dev\adk_workspace\ogp-java\junit4416729307427640548.properties" />
-    <property name="java.class.path" value="C:\dev\adk_workspace\ogp-java\lib\commons-io-2.4.jar;C:\dev\adk_workspace\ogp-java\lib\commons-lang-2.5.jar;C:\dev\adk_workspace\ogp-java\lib\jsoup-1.7.2.jar;C:\dev\adk_workspace\ogp-java\lib\junit-4.8.1.jar;C:\dev\adk_workspace\ogp-java\bin\classes;C:\dev\adk_workspace\ogp-java\bin\test\classes;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-launcher.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-junit.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-junit4.jar" />
-    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+    <property name="java.class.path" value="C:\dev\eclipse_workspace\jcom201308\ogp-java\lib\commons-io-2.4.jar;C:\dev\eclipse_workspace\jcom201308\ogp-java\lib\commons-lang-2.5.jar;C:\dev\eclipse_workspace\jcom201308\ogp-java\lib\jsoup-1.7.2.jar;C:\dev\eclipse_workspace\jcom201308\ogp-java\lib\junit-4.8.1.jar;C:\dev\eclipse_workspace\jcom201308\ogp-java\bin\classes;C:\dev\eclipse_workspace\jcom201308\ogp-java\bin\test\classes;C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-launcher.jar;C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant.jar;C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-junit.jar;C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
     <property name="project.version" value="0.1" />
     <property name="compile.bin" value=".//bin/classes" />
     <property name="project.name" value="ogp-java" />
@@ -69,28 +71,29 @@
     <property name="java.vm.specification.version" value="1.0" />
     <property name="ant.file.type.ogp-java" value="file" />
     <property name="sun.cpu.endian" value="little" />
-    <property name="sun.os.patch.level" value="" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
     <property name="compile.debug" value="on" />
-    <property name="java.io.tmpdir" value="C:\Users\Dylan\AppData\Local\Temp\" />
+    <property name="java.io.tmpdir" value="C:\Users\conraj1\AppData\Local\Temp\" />
+    <property name="eclipse.pdebuild.home" value="/C:/dev/eclipse/eclipse-kepler-4.3.0/plugins/org.eclipse.pde.build_3.8.100.v20130514-1028/./" />
     <property name="test.src" value="./test" />
     <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="javadoc" value="./docs/javadoc" />
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
-    <property name="user.dir" value="C:\dev\adk_workspace\ogp-java" />
+    <property name="java.ext.dirs" value="C:\dev\java\jdk1.6.0_16_x64\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\dev\eclipse_workspace\jcom201308\ogp-java" />
     <property name="project" value="./" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="compile.deprecation" value="on" />
-    <property name="basedir" value="C:\dev\adk_workspace\ogp-java" />
+    <property name="basedir" value="C:\dev\eclipse_workspace\jcom201308\ogp-java" />
     <property name="ant.java.version" value="1.6" />
-    <property name="ant.core.lib" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant.jar" />
+    <property name="ant.core.lib" value="C:\dev\eclipse\eclipse-kepler-4.3.0\plugins\org.apache.ant_1.8.4.v201303080030\lib\ant.jar" />
     <property name="file.encoding" value="Cp1252" />
     <property name="java.specification.version" value="1.6" />
     <property name="ant.project.invoked-targets" value="all" />
   </properties>
-  <testcase classname="com.github.ledlogic.ogp.OpenGraphMetaTest" name="testOpenGraphMeta" time="0.097" />
+  <testcase classname="com.github.ledlogic.ogp.OpenGraphMetaTest" name="testOpenGraphMeta" time="0.036" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
