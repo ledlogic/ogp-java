@@ -99,6 +99,7 @@
 	<!-- Compile the unit test classes -->
 	<target name="test.compile" depends="init, compile, test.clean, test.prepare">
 		<javac
+		    includeantruntime="false"
         	srcdir="${test.src}"
             destdir="${test.bin}"
             debug="${compile.debug}"
