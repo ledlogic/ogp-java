@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DYLAN-PC" name="com.github.ledlogic.ogp.OpenGraphParserTest" tests="1" time="0.318" timestamp="2013-09-04T12:37:23">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="dist" value="./dist" />
+    <property name="lib" value="./lib" />
+    <property name="os.name" value="Windows 8" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_43\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_43\jre\classes" />
+    <property name="ant.file.ogp-java" value="C:\dev\adk_workspace\ogp-java\build.xml" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609" />
+    <property name="java.runtime.version" value="1.6.0_43-b01" />
+    <property name="images" value="./images" />
+    <property name="user.name" value="Dylan" />
+    <property name="reports" value="./docs/reports" />
+    <property name="test.results" value="./report" />
+    <property name="user.language" value="en" />
+    <property name="build" value="./build" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\bin" />
+    <property name="ant.project.default-target" value="all" />
+    <property name="ant.project.name" value="ogp-java" />
+    <property name="java.version" value="1.6.0_43" />
+    <property name="user.timezone" value="" />
+    <property name="bin" value=".//bin" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="compile.optimize" value="on" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="dist.app" value="ogp-java" />
+    <property name="dist.version" value="0.1" />
+    <property name="web" value="./web" />
+    <property name="java.class.version" value="50.0" />
+    <property name="src" value="./src" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_43\jre" />
+    <property name="test.xsl" value="test/xsl" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\dev\adk_workspace\ogp-java\build.xml" />
+    <property name="os.version" value="6.2" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="20.14-b01" />
+    <property name="docs" value="./docs" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="user.home" value="C:\Users\Dylan" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_43\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;." />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.github.ledlogic.ogp.OpenGraphParserTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\dev\adk_workspace\ogp-java\docs\reports\xml\TEST-com.github.ledlogic.ogp.OpenGraphParserTest.xml crashfile=C:\dev\adk_workspace\ogp-java\junitvmwatcher7860299930616139800.properties propsfile=C:\dev\adk_workspace\ogp-java\junit4719981100524804636.properties" />
+    <property name="java.class.path" value="C:\dev\adk_workspace\ogp-java\lib\commons-io-2.4.jar;C:\dev\adk_workspace\ogp-java\lib\commons-lang-2.5.jar;C:\dev\adk_workspace\ogp-java\lib\jsoup-1.7.2.jar;C:\dev\adk_workspace\ogp-java\lib\junit-4.8.1.jar;C:\dev\adk_workspace\ogp-java\bin\classes;C:\dev\adk_workspace\ogp-java\bin\test\classes;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-launcher.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-junit.jar;C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+    <property name="project.version" value="0.1" />
+    <property name="compile.bin" value=".//bin/classes" />
+    <property name="project.name" value="ogp-java" />
+    <property name="test.bin" value="./bin/test/classes" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="ant.file.type.ogp-java" value="file" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="compile.debug" value="on" />
+    <property name="java.io.tmpdir" value="C:\Users\Dylan\AppData\Local\Temp\" />
+    <property name="test.src" value="./test" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="os.arch" value="amd64" />
+    <property name="javadoc" value="./docs/javadoc" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_43\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\dev\adk_workspace\ogp-java" />
+    <property name="project" value="./" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="compile.deprecation" value="on" />
+    <property name="basedir" value="C:\dev\adk_workspace\ogp-java" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="C:\dev\adt-bundle-windows-x86_64-20130729\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="ant.project.invoked-targets" value="all" />
+  </properties>
+  <testcase classname="com.github.ledlogic.ogp.OpenGraphParserTest" name="testParseHtml" time="0.238" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

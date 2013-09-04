@@ -107,20 +107,23 @@
 
 			<classpath refid="test.classpath" />
 		</javac>
-		<copy todir="${test.bin}/classes">
+		<copy todir="${test.bin}">
 			<fileset dir="${test.src}" excludes="**/*.java" />
 		</copy>
-		<copy todir="${test.bin}/classes" filtering="on">
+		<copy todir="${test.bin}" filtering="on">
 			<fileset dir="${test.src}" includes="**/*.properties" />
+		</copy>
+		<copy todir="${test.bin}" filtering="on">
+			<fileset dir="${test.src}" includes="**/*.html" />
 		</copy>
 	</target>
 
-	<target name="test.run" depends="init">
+	<target name="test.run" depends="init, test.compile">
 		<mkdir dir="${reports}"/>
 		<mkdir dir="${reports}/xml"/>
 		<mkdir dir="${reports}/html"/>
 				
-		<junit printsummary="yes" haltonfailure="yes" haltonerror="yes">
+		<junit printsummary="yes" haltonfailure="no" haltonerror="no">
 			<classpath>
 				<path refid="test.run.classpath" />
 			</classpath>
@@ -133,12 +136,15 @@
 			</batchtest>
 		</junit>
 				
+		
+		<!-- TODO:
 		<junitreport todir="${reports}/html">
 			<fileset dir="${reports}/xml">
 				<include name="TEST-*.xml"/>
 			</fileset>
 			<report format="frames" styledir="${test.xsl}" todir="${reports}/html" />
 		</junitreport>
+		-->
 	</target>
 	
 	<target name="test" depends="init, test.compile, test.run" description="Compiles and runs tests" />
@@ -160,7 +166,7 @@
 	</target>
 
 	<target name="javadoc" depends="javadoc.clean, javadoc.prepare" description="Generates the JavaDoc API for this project">
-		<javadoc packagenames="net.sourceforge.*"
+		<javadoc packagenames="com.github.*"
 	           sourcepath="${src}"
 	           destdir="${javadoc}"
 	           author="true"
