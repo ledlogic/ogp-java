@@ -1,0 +1,179 @@
+<project name="ogp-java" default="all" basedir=".">
+	<property file="build.properties" />
+
+	<path id="compile.classpath">
+		<fileset dir="${lib}" includes="**/*.jar"/>
+	</path>
+
+	<path id="run.classpath">
+		<path refid="compile.classpath" />
+		<pathelement path="${bin}"/>
+	</path>
+
+	<!-- convention: targets which are externally available have descriptions -->
+
+	<!-- inits target -->
+
+	<target name="init" description="Display title message">
+		<echo message="Build file: ${project.name}-${project.version}"/>
+	</target>
+	
+	<target name="clean.all" depends="compile.clean, dist.clean, javadoc.clean, test.clean" description="Clean all build directories">
+	</target>
+
+	<!-- compile targets -->
+
+	<!-- Cleans compile directories and files -->
+	<target name="compile.clean" depends="init">
+		<delete dir="${compile.bin}" />
+	</target>
+
+	<!-- Prepares compile directories -->
+	<target name="compile.prepare" depends="init">
+		<mkdir dir="${compile.bin}" />
+	</target>
+
+	<target name="compile" depends="init, compile.clean, compile.prepare" description="Compiles the source code">
+		<javac
+			srcdir="${src}"
+			destdir="${compile.bin}"
+			debug="${compile.debug}"
+			classpathref="compile.classpath"
+		/>
+	</target>
+
+	<!-- dist targets -->
+
+	<!-- Cleans distribution directories and files -->
+	<target name="dist.clean" depends="init">
+		<delete dir="${dist}" />
+		<delete dir="${build}" />
+	</target>
+
+	<!-- Cleans distribution directories and files -->
+	<target name="dist.prepare" depends="init">
+		<mkdir dir="${dist}" />
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="dist" depends="init, dist.clean, dist.prepare" description="Assemble distributable scomponents">
+		<delete dir="${build}" failonerror="false" />
+		
+  		<copy todir="${build}">
+		    <fileset dir="${compile.bin}" />
+  		</copy>
+		
+       <jar jarfile="${dist}/${dist.app}-${dist.version}.jar"
+		     basedir="${compile.bin}"
+		     includes="**">
+		</jar>		
+	</target>
+
+	<!-- test targets -->
+	
+	<property name="test.xsl" value="test/xsl" />
+		
+	<path id="test.classpath">
+		<path refid="compile.classpath" />
+		<pathelement path="${compile.bin}"/>
+	</path>
+	
+	<path id="test.run.classpath">
+		<path refid="test.classpath" />
+		<pathelement path="${test.bin}"/>
+	</path>
+
+	<!-- Clean unit test directories and files -->
+	<target name="test.clean" depends="init">
+		<delete dir="${test.bin}" />
+		<delete dir="${reports}"/>
+		<delete dir="${reports}/xml"/>
+		<delete dir="${reports}/html"/>
+	</target>
+
+	<!-- Prepare the unit test directories and files -->
+	<target name="test.prepare" depends="init">
+		<mkdir dir="${test.bin}" />
+	</target>
+
+	<!-- Compile the unit test classes -->
+	<target name="test.compile" depends="init, compile, test.clean, test.prepare">
+		<javac
+        	srcdir="${test.src}"
+            destdir="${test.bin}"
+            debug="${compile.debug}"
+            optimize="${compile.optimize}"
+            deprecation="${compile.deprecation}">
+
+			<classpath refid="test.classpath" />
+		</javac>
+		<copy todir="${test.bin}/classes">
+			<fileset dir="${test.src}" excludes="**/*.java" />
+		</copy>
+		<copy todir="${test.bin}/classes" filtering="on">
+			<fileset dir="${test.src}" includes="**/*.properties" />
+		</copy>
+	</target>
+
+	<target name="test.run" depends="init">
+		<mkdir dir="${reports}"/>
+		<mkdir dir="${reports}/xml"/>
+		<mkdir dir="${reports}/html"/>
+				
+		<junit printsummary="yes" haltonfailure="yes" haltonerror="yes">
+			<classpath>
+				<path refid="test.run.classpath" />
+			</classpath>
+			
+			<formatter type="xml"/>
+			<batchtest fork="yes" todir="${reports}/xml">
+				<fileset dir="${test.bin}">
+			  		<include name="**/*Test*.class"/>
+				</fileset>
+			</batchtest>
+		</junit>
+				
+		<junitreport todir="${reports}/html">
+			<fileset dir="${reports}/xml">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" styledir="${test.xsl}" todir="${reports}/html" />
+		</junitreport>
+	</target>
+	
+	<target name="test" depends="init, test.compile, test.run" description="Compiles and runs tests" />
+
+	<!-- deploy targets -->
+
+	<target name="deploy" description="" />
+
+	<!-- javadoc targets -->
+	
+	<!-- Clean unit test directories and files -->
+	<target name="javadoc.clean">
+		<delete dir="${javadoc}" />
+	</target>
+
+	<!-- Prepare the javadoc directories and files -->
+	<target name="javadoc.prepare">
+		<mkdir dir="${javadoc}" />
+	</target>
+
+	<target name="javadoc" depends="javadoc.clean, javadoc.prepare" description="Generates the JavaDoc API for this project">
+		<javadoc packagenames="net.sourceforge.*"
+	           sourcepath="${src}"
+	           destdir="${javadoc}"
+	           author="true"
+	           version="true"
+	           use="true"
+	           windowtitle="ogp-java">
+			<doctitle><![CDATA[<h1>ogp-java</h1>]]></doctitle>
+			<bottom><![CDATA[<i>Copyright &#169; 2013 Jeff D. Conrad.</i>]]></bottom>
+		</javadoc>
+	</target>
+
+	<!-- all target -->
+	<target name="all"
+			depends="compile, dist, javadoc, test, deploy"
+			description="Compiles, assembles, runs javadoc, and deploys" />
+</project>
