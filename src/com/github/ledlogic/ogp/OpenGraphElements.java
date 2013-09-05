@@ -10,6 +10,11 @@ public class OpenGraphElements extends Elements {
 		super();
 	}
 
+	/**
+	 * Returns the first meta with this property.
+	 * @param property
+	 * @return
+	 */
 	public OpenGraphMeta getMeta(String property) {
 		for (Element element:this) {
 			if (property.equals(element.attr("property"))) {
