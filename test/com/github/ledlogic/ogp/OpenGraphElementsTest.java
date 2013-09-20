@@ -42,4 +42,26 @@ public class OpenGraphElementsTest {
 		Assert.assertEquals(html3, html);
 	}
 
+	// @see http://ogp.me
+	@Test
+	public void testGetHtml4() throws IOException {
+		String fn4 = "/html/test-0004.html";
+		URL url4 = this.getClass().getResource(fn4);
+		File file4 = new File(url4.getFile());
+		String html4 = FileUtils.readFileToString(file4, "UTF-8");
+		
+		OpenGraphElements elements = new OpenGraphElements();
+		elements.addMeta(BasicProperty.TITLE, "Open Graph protocol");
+		elements.addMeta(BasicProperty.TYPE, "website");
+		elements.addMeta(BasicProperty.URL, "http://ogp.me/");
+		elements.addMeta(BasicProperty.IMAGE, "http://ogp.me/logo.png");
+		elements.addMeta(BasicProperty.IMAGE_TYPE, "image/png");
+		elements.addMeta(BasicProperty.IMAGE_WIDTH, "300");
+		elements.addMeta(BasicProperty.IMAGE_HEIGHT, "300");
+		elements.addMeta(BasicProperty.DESCRIPTION, "The Open Graph protocol enables any web page to become a rich object in a social graph.");
+		elements.addMeta(FacebookProperty.APP_ID, "115190258555800");
+		
+		String html = elements.getHtml();
+		Assert.assertEquals(html4, html);
+	}
 }
