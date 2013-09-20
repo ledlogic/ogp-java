@@ -4,6 +4,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import com.github.ledlogic.ogp.elements.OpenGraphMeta;
+
 public class OpenGraphMetaTest {
 
 	@Test

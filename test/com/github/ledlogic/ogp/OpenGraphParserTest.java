@@ -10,6 +10,10 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
 
+import com.github.ledlogic.ogp.elements.OpenGraphElements;
+import com.github.ledlogic.ogp.parsers.OpenGraphParser;
+import com.github.ledlogic.ogp.properties.BasicProperty;
+
 public class OpenGraphParserTest {
 
 	@Test
@@ -21,10 +25,10 @@ public class OpenGraphParserTest {
 		OpenGraphParser ogp = new OpenGraphParser();
 		OpenGraphElements elements = ogp.parseHtml(html1);
 		Assert.assertEquals(4, elements.size());
-		Assert.assertEquals("The Rock", elements.getMetaContent(OpenGraphProperty.TITLE.getProperty()));
-		Assert.assertEquals("video.movie", elements.getMetaContent(OpenGraphProperty.TYPE.getProperty()));
-		Assert.assertEquals("http://www.imdb.com/title/tt0117500/", elements.getMetaContent(OpenGraphProperty.URL.getProperty()));
-		Assert.assertEquals("http://ia.media-imdb.com/images/rock.jpg", elements.getMetaContent(OpenGraphProperty.IMAGE.getProperty()));
+		Assert.assertEquals("The Rock", elements.getMetaContent(BasicProperty.TITLE.getProperty()));
+		Assert.assertEquals("video.movie", elements.getMetaContent(BasicProperty.TYPE.getProperty()));
+		Assert.assertEquals("http://www.imdb.com/title/tt0117500/", elements.getMetaContent(BasicProperty.URL.getProperty()));
+		Assert.assertEquals("http://ia.media-imdb.com/images/rock.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty()));
 		String outer = elements.outerHtml();
 		Assert.assertTrue(StringUtils.isNotBlank(outer));
 		
