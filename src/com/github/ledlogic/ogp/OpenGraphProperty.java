@@ -1,7 +1,7 @@
 package com.github.ledlogic.ogp;
 
 /**
- * @see http://ogp.me/
+ * @see https://developers.facebook.com/docs/opengraph/music/
  */
 
 
