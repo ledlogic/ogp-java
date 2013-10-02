@@ -39,5 +39,56 @@ public class OpenGraphParserTest {
 		Assert.assertTrue(StringUtils.isNotBlank(html2));
 		Assert.assertEquals(html2, outer);
 	}
+	
+	@Test
+	public void testParseMultipleImages5() throws IOException {
+		String fn5 = "/html/test-0005.html";
+		URL url5 = this.getClass().getResource(fn5);
+		File file5 = new File(url5.getFile());
+		String html5 = FileUtils.readFileToString(file5, "UTF-8");
+		OpenGraphParser ogp = new OpenGraphParser();
+		OpenGraphElements elements = ogp.parseHtml(html5);
+		Assert.assertEquals(6, elements.size());
+		Assert.assertEquals("http://example.com/rock.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_WIDTH.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 0));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 1));
+		
+		Assert.assertEquals("http://example.com/rock2.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 1));
+		Assert.assertEquals("http://example.com/rock3.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 2));
+		Assert.assertEquals("1000", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 2));
+		
+		String outer = elements.outerHtml();
+		Assert.assertTrue(StringUtils.isNotBlank(outer));
+	}
+	
+	@Test
+	public void testParseMultipleImages6() throws IOException {
+		String fn5 = "/html/test-0006.html";
+		URL url5 = this.getClass().getResource(fn5);
+		File file5 = new File(url5.getFile());
+		String html5 = FileUtils.readFileToString(file5, "UTF-8");
+		OpenGraphParser ogp = new OpenGraphParser();
+		OpenGraphElements elements = ogp.parseHtml(html5);
+		Assert.assertEquals(9, elements.size());
+		Assert.assertEquals("http://example.com/rock.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_WIDTH.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty()));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 0));
+		Assert.assertEquals("300", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 1));
+		
+		Assert.assertEquals("http://example.com/rock2.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 1));
+		Assert.assertEquals("http://example.com/rock3.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 2));
+		Assert.assertEquals("1000", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 2));
 
+		Assert.assertEquals("http://example.com/rock4.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 3));
+		Assert.assertEquals("1000", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 3));
+		Assert.assertEquals("http://example.com/rock5.jpg", elements.getMetaContent(BasicProperty.IMAGE.getProperty(), 4));
+		Assert.assertEquals("2000", elements.getMetaContent(BasicProperty.IMAGE_HEIGHT.getProperty(), 4));
+
+		String outer = elements.outerHtml();
+		Assert.assertTrue(StringUtils.isNotBlank(outer));
+	}
+	
 }
